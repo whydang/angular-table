@@ -57,12 +57,12 @@
 				<tbody>
 
 					<!-- Create a table row for each person in your data object -->
-					<tr ng-repeat="peep in people.data | orderBy: sortType">					
+					<tr ng-repeat="peep in people.data | orderBy: sortType | filter: search">					
 						
 						<!-- Create 3 <td> elements to display name, job_title, and salary -->
 						<td>{{peep.name}}</td>
 						<td>{{peep.job_title}}</td>
-						<td>{{peep.salary}}</td>
+						<td>{{peep.salary | currency}}</td>
 						
 					</tr>
 

@@ -6,7 +6,7 @@ var app = angular.module('sortApp', []);
 // making sure to pass in both the $scope and $http variables
     app.controller('mainController', function($scope, $http) {
         $http.get('data/salaries.json').then(function(response){
-            
+        	console.log(response);
             
 
             $scope.people = response;
